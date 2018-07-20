@@ -36,11 +36,11 @@ app.intent('sayChickenNumber',
   {
     "slots":{"number":"NUMBER"}
 	,"utterances":[ 
-		"chicken chicken chicken {number}"]
+		"chicken {number}"]
   },
   function(request,response) {
     var number = request.slot('number');
-    response.say("You asked for the number "+number);
+    response.say("You asked for the number of the chicken, it is "+number);
   }
 );
 
