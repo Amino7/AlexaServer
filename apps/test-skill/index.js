@@ -32,4 +32,16 @@ app.intent('sayNumber',
   }
 );
 
+app.intent('sayChickenNumber',
+  {
+    "slots":{"number":"NUMBER"}
+	,"utterances":[ 
+		"chicken chicken chicken {number}"]
+  },
+  function(request,response) {
+    var number = request.slot('number');
+    response.say("You asked for the number "+number);
+  }
+);
+
 module.exports = app;
