@@ -40,7 +40,7 @@ app.intent('sayChickenNumber',
   },
   function(request,response) {
     var number = request.slot('number');
-    response.say("You asked for the number of the chicken, it is "+number);
+    response.say("You said the number of the chicken is "+number);
   }
 );
 
