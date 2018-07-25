@@ -4,7 +4,8 @@
   "description": "Sample Alexa Server Project",
   "main": "index.js",
   "dependencies": {
-    "alexa-app-server": "^2.2.4"
+    "alexa-app-server": "^2.2.4",
+    "axios": "^0.18.0"
   },
   "devDependencies": {},
   "scripts": {

@@ -1,8 +1,9 @@
 module.change_code = 1;
 'use strict';
 
-var alexa = require( 'alexa-app' );
-var app = new alexa.app( 'test-skill' );
+const alexa = require( 'alexa-app' );
+const app = new alexa.app( 'test-skill' );
+const axios = require('axios');
 
 
 app.launch( function( request, response ) {
@@ -39,6 +40,7 @@ app.intent('sayChickenNumber',
 		"chicken {number}"]
   },
   function(request,response) {
+    axios.get(`https://securetestapi.herokuapp.com/alexa`);
     var number = request.slot('number');
     response.say("You said the number of the chicken is "+number);
   }
