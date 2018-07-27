@@ -50,7 +50,7 @@ app.intent('sayChickenNumber',
     console.log("----------------------- LOGGING2 ---------------------")
     console.log(APIResponse);
     var number = request.slot('number');
-    response.say('You said you wanted to buy ' + chickens + '. '+ APIResponse);
+    response.say('You said you wanted to buy ' + number + '. '+ APIResponse);
   }
 );
 
