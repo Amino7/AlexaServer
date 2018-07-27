@@ -44,6 +44,7 @@ app.intent('sayChickenNumber',
     axios.get(`https://securetestapi.herokuapp.com/alexa`)
     .then(res => {
       APIResponse = res.data;
+      console.log(APIResponse);
     });
     var number = request.slot('number');
     response.say('You said you wanted to buy ' + chickens + ' <br>' + APIResponse);
