@@ -41,19 +41,20 @@ app.intent('sayChickenNumber',
   },
   function(request,response) {
     var APIResponse;
+    var number = request.slot('number');
     axios.get(`https://securetestapi.herokuapp.com/alexa`)
     .then(res => {
       this.APIResponse = res.data;
       console.log("----------------------- LOGGING ----------------------")
       console.log(this.APIResponse);
+      console.log("----------------------- LOGGING2 ---------------------")
+      console.log(APIResponse);
+      this.response.say('You said you wanted to buy ' + this.number + ' chickens. '+ APIResponse);
     })
     .catch((error) => {
       console.log(error);
     })
-    var number = request.slot('number');
-    console.log("----------------------- LOGGING2 ---------------------")
-    console.log(APIResponse);
-    response.say('You said you wanted to buy ' + number + ' chickens. '+ APIResponse);
+
   }
 );
 
