@@ -49,7 +49,7 @@ app.intent('sayChickenNumber',
         console.log("----------------------- LOGGING2 ---------------------")
         console.log(APIResponse);
         var number = request.slot('number');
-        done(null,APIResponse);
+        return done(null,APIResponse);
       })
       .catch(error => done(error, false));
   };
