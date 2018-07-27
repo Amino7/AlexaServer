@@ -43,6 +43,7 @@ app.intent('sayChickenNumber',
     var APIResponse;
     axios.get(`https://securetestapi.herokuapp.com/alexa`)
     .then(res => {
+      console.log(res);
       APIResponse = res;
     });
     var number = request.slot('number');
