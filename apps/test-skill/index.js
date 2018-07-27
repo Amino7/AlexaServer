@@ -53,8 +53,7 @@ app.intent('sayChickenNumber',
       })
       .catch(error => done(error, false));
   };
-
-    console.log("----------------------- LOGGING2 ---------------------")
+    var number = request.slot('number');
     console.log(APIResponse);
     response.say('You said you wanted to buy ' + number + '. '+ APIResponse);
 
