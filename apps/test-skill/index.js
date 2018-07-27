@@ -48,7 +48,7 @@ app.intent('sayChickenNumber',
       console.log(APIResponse);
     });
     var number = request.slot('number');
-    response.say('You said you wanted to buy ' + chickens + ' <br>' + APIResponse);
+    response.say('You said you wanted to buy ' + chickens + ' <br>');
   }
 );
 
