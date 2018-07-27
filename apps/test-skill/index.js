@@ -48,7 +48,7 @@ app.intent('sayChickenNumber',
       console.log("----------------------- LOGGING ----------------------")
       console.log(this.APIResponse);
       console.log("----------------------- LOGGING2 ---------------------")
-      console.log(APIResponse);
+      console.log(APIResponse + ", " + this.number);
       this.response.say('You said you wanted to buy ' + this.number + ' chickens. '+ APIResponse);
     })
     .catch((error) => {
