@@ -54,8 +54,9 @@ app.intent('sayChickenNumber',
       .catch(error => done(error, false));
   };
     var number = request.slot('number');
-    console.log(APIResponse);
-    response.say('You said you wanted to buy ' + number + '. '+ APIResponse);
+    console.log("----------------------- LOGGING3 ---------------------")
+    console.log(APIResponse());
+    response.say('You said you wanted to buy ' + number + '. '+ APIResponse());
 
   }
 );
