@@ -66,7 +66,7 @@ app.intent('sayChickenNumber',
       var number = req.slot('number');
       console.log("-----------------------------------------------------------------");
       console.log(req);
-      res.say('You said you wanted to buy ' + number + ' chickens. '+ response.data + "DeviceId: ");
+      res.say('You said you wanted to buy ' + number + ' chickens. '+ response.data + " DeviceId: " + req.data.context.System.device.deviceId);
     } catch(err) {
       console.log(err);
     }
